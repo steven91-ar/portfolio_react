@@ -1,28 +1,19 @@
-import React from "react";
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
-import logo from "../assets/logo.png";
+
+import logo from '../assets/Logo_SS.png'; 
+import { FaLinkedin, FaGithub,  } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className="mb-20 flex items-center justify-between py-6">
-      {/* Logo */}
-      <div className="flex-shrink-0 items-center flex">
-        <img
-          src={logo}
-          alt="Kevin Rush Logo"
-          className="mx-2 w-10"
-        />
-      </div>
-
-      {/* Social Icons */}
-      <div className="flex items-center justify-center gap-4 text-2xl">
+    <nav className=" mb-20 flex items-center justify-between py-6"> 
+    <div className ="flex-shrink-0 items-center">
+      <img className="mx-2 w-10" src={logo} alt="Logo" ></img>
+    </div>
+    <div className="m-8 flex items-center justify-center gap-4 text-2xl">
         <FaLinkedin />
         <FaGithub />
-        <FaTwitter />
-        <FaInstagram />
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
