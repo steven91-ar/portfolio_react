@@ -23,7 +23,7 @@ const Navbar = () => {
           <FaGithub />
         </a>
 
-        <a href="/cv.pdf" 
+        <a href="https://drive.google.com/file/d/1neZ0_hhzVP2B-m5QiQekK4dosEY-hhdn/view?usp=sharing" 
            target="_blank" 
            rel="noopener noreferrer" 
            className="text-sm font-medium border px-3 py-1 rounded hover:bg-neutral-200">
