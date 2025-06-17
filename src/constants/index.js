@@ -3,67 +3,92 @@ import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
+
 export const HERO_CONTENT = `Développeur back-end passionné, j'ai un niveau Bac+4 en Conception et Développement d’Applications (février 2025). Je me spécialise dans le langage Python avec les frameworks Django et Flask, à travers des projets concrets que je développe régulièrement. Actuellement en recherche active d’un poste en CDI, je suis prêt à mettre mes compétences au service d’une entreprise ambitieuse et à continuer de progresser au quotidien.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `Développeur back-end passionné par l’écosystème Python, je me forme en continu à travers des projets concrets et variés. J’ai commencé mon parcours avec une spécialisation en Symfony et PHP, avant d’évoluer vers des frameworks modernes comme Django et Flask. Autonome, curieux et adaptable, je prends plaisir à chercher les bonnes solutions face aux défis techniques, tout en consolidant mes compétences au fil des projets. Mon objectif : progresser chaque jour, apprendre de nouvelles approches, et contribuer activement à des applications utiles et bien construites.`;
 
 export const EXPERIENCES = [
   {
-    year: "Fév. 2024 – Fév. 2025",
-    role: "Concepteur Développeur d’Applications (Alternance)",
-    company: "OpenDev Solutions",
-    description: `Développement d’applications web en Python avec Django. Intégration d’API REST, gestion de bases de données PostgreSQL, et création d’interfaces réactives avec React et Tailwind CSS.`,
-    technologies: ["Python", "Django", "PostgreSQL", "React", "Tailwind CSS"],
-  },
-  {
-    year: "Avril 2025 – Aujourd’hui",
+    year: "Mars 2025 – Aujourd’hui",
     role: "Développeur back-end Python (Projets personnels)",
     company: "Projets GitHub",
-    description: `Réalisation de projets personnels pour approfondir mes compétences. Création d’API, tests unitaires, structuration de projets Flask, et déploiement sur Vercel.`,
+    description: `Durant ma formation en alternance, j’ai découvert une réelle passion pour Python, ce qui m’a poussé à me spécialiser dans ce langage afin de renforcer mon employabilité. J’ai ainsi développé plusieurs projets personnels disponibles sur GitHub, où j’ai mis en œuvre la création d’API REST, la structuration d’applications avec Flask et Django, ainsi que des tests unitaires. Ces projets reflètent mon autonomie, ma curiosité et ma capacité à apporter des solutions concrètes à une future entreprise.`,
     technologies: ["Python", "Flask", "Git", "SQLite", "Vercel"],
   },
   {
-    year: "2023",
+    year: "Janv. 2024 – Fevrier 2025",
+    role: "Développeur SQL et Réseau (Alternance)",
+    company: "Meca Distribution - 3W Academy",
+    description: `Optimisation des requêtes SQL dans un ERP, diagnostic réseau avec Wireshark, amélioration de la qualité de service et gestion des transactions complexes.`,
+    technologies: ["SQL", "ERP", "Wireshark", "QoS"],
+  },
+  {
+  year: "Avril 2023 – Octobre 2023",
+  role: "Bootcamp Développeur Java",
+  company: "Wild Code School – Paris",
+  description: `Formation intensive axée sur le développement d’applications Java orientées objet. Réalisation de projets concrets en équipe, apprentissage des bonnes pratiques (POO, tests, versioning Git), utilisation de Spring Boot, et gestion de base de données relationnelle.`,
+  technologies: ["Java", "Spring Boot", "Git", "MySQL", "POO"],
+},
+
+  {
+    year: "Juin 2021 – Mars 2022",
+    role: "Développeur CMS",
+    company: "Dev in France",
+    description: `Création de plus de 20 sites web dynamiques, optimisation SEO, intégration de formulaires et galeries, développement avec PHP et HTML/CSS.`,
+    technologies: ["PHP", "HTML", "CSS", "CMS"],
+  },
+  
+  {
+    year: "Janvier - Mars 2021",
     role: "Stagiaire Développeur Web",
-    company: "Tech’Innov Junior",
-    description: `Participation à la refonte d’un site vitrine sous WordPress et développement de mini-outils internes en JavaScript.`,
+    company: "MyLearn",
+    description: `Refonte d’un site vitrine WordPress et développement de mini-outils internes en JavaScript.`,
     technologies: ["HTML", "CSS", "JavaScript", "WordPress"],
   },
 ]
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "Clone Twitter",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "Ce projet est une application web inspirée de Twitter, que j'ai développée dans le but de comprendre et mettre en pratique le développement web full-stack avec Node.js. Il permet aux utilisateurs de créer un compte, se connecter, publier des tweets, consulter ceux des autres, liker, commenter et recevoir des notifications.",
+    technologies: ["Express.js", "Node.js", "MongoDB", "MVC", "EJS"],
+    github: "https://github.com/steven91-ar/twitter_nodejs.git",
+    demo: "https://streamable.com/slv0lw",
   },
   {
-    title: "Task Management App",
+    title: "Prise de rendez-vous médical",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "Application web permettant aux patients de réserver un rendez-vous en ligne avec un médecin. J’ai utilisé Django pour gérer les comptes, les formulaires, et l’enregistrement des rendez-vous via une base de données relationnelle. Cette application inclut également un système de notifications par email pour confirmer les rendez-vous.",
+    technologies: ["HTML", "CSS", "Django", "Bootstrap", "PostgreSQL"],
+    github: "https://github.com/steven91-ar/rdv_doctor.git",
+    demo: "https://streamable.com/jcmspq",
   },
   {
-    title: "Portfolio Website",
+    title: "Application de Suivi des Finances Personnelles",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+      "Script Python en ligne de commande pour gérer son budget personnel via un fichier JSON. Il permet d’ajouter des revenus/dépenses et de suivre son solde. Un bon exercice de structuration, logique métier et manipulation de données",
+    technologies: ["Python", "JSON"],
+    github: "https://github.com/steven91-ar/Suivi_de_finances_personnelles.git",
+    demo: "https://streamable.com/w37843",
   },
   {
-    title: "Blogging Platform",
+    title: "Analyse Site Cdiscount",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+      "J'ai développé ce script en Python pour automatiser l’analyse de promotions sur Cdiscount. Il lit des fichiers Excel, filtre les meilleures offres, et exporte les résultats dans un nouveau fichier. Ce projet m’a permis de renforcer mes compétences en traitement de données et en automatisation de tâches répétitives.",
+    technologies: ["Python", "Panda", "BrightData", "Excel"],
+    github: "https://github.com/steven91-ar/scraping.python_analyse_site.git",
+    demo: "https://streamable.com/eyey5p",
   },
 ];
 
 export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+  address: "Savigny sur-Orge, France",
+  phoneNo: "+33 6 69 26 45 17",
+  email: "stevensinpra@gmail.com",
 };

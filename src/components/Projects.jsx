@@ -1,16 +1,23 @@
 import { PROJECTS } from "../constants";
+import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+import { FiVideo } from "react-icons/fi"
 
 const Projects = () => {
   return (
     <div className="border-b border-neutral-900 pb-4">
       {/* Titre */}
-      <h1 className="my-20 text-center text-4xl">Projects</h1>
+      <motion.h1 className="my-20 text-center text-4xl">Mes Projets</motion.h1>
 
       <div>
         {PROJECTS.map((project, index) => (
           <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
             {/* Image */}
-            <div className="w-full lg:w-1/4">
+            <motion.div
+              whileInView={{ y: 0, opacity: 1 }}
+              initial={{ y: -100, opacity: 0 }}
+              transition={{ duration: 1 }}
+              className="w-full lg:w-1/4">
               <img
                 src={project.image}
                 width={150}
@@ -18,10 +25,14 @@ const Projects = () => {
                 alt={project.title}
                 className="mb-6 rounded"
               />
-            </div>
+            </motion.div>
 
             {/* Texte */}
-            <div className="w-full max-w-xl lg:w-3/4">
+            <motion.div
+              whileInView={{ y: 0, opacity: 1 }}
+              initial={{ y: -100, opacity: 0 }}
+              transition={{ duration: 1 }}
+              className="w-full max-w-xl lg:w-3/4">
               <h6 className="mb-2 font-semibold">{project.title}</h6>
               <p className="mb-4 text-neutral-400">{project.description}</p>
 
@@ -36,7 +47,32 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-            </div>
+              {/* Liens */}
+              <div className="flex flex-wrap gap-4">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded bg-purple-700 px-4 py-2 text-sm font-medium text-white hover:bg-cyan-600 transition"
+                  >
+                    <FaGithub className="text-lg" />
+                    Voir le code
+                  </a>
+                )}
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded border border-purple-700 px-4 py-2 text-sm font-medium text-white hover:bg-purple-900 transition"
+                  >
+                    <FiVideo className="text-lg" />
+                    Voir la démo
+                  </a>
+                )}
+              </div>
+            </motion.div>
           </div>
         ))}
       </div>
