@@ -2,55 +2,123 @@ import { FaReact, FaNodeJs } from "react-icons/fa";
 import { RiReactjsLine } from "react-icons/ri";
 import { SiMongodb, SiPostgresql, SiNextdotjs, SiRedis, SiPython, SiMysql } from "react-icons/si";
 import { TbBrandDjango, TbBrandJavascript, TbBrandNextjs, TbBrandSymfony } from "react-icons/tb";
+import {motion} from "framer-motion";
+
+const iconVariants = (duration = 2.4) => ({
+  initial: { y: 10 },
+  animate: {
+    y: [-10, 10],
+    transition: {
+      duration,
+      repeat: Infinity,
+      repeatType: "reverse",
+      ease: "linear",
+    },
+  },
+});
 
 const Technologies = () => {
   return (
     <div className="border-b border-neutral-800 pb-24">
       {/* Titre */}
-      <h1 className="my-20 text-center text-4xl">Technologies</h1>
+      <motion.h1 
+    whileInView={{ opacity: 1, y:0}}
+    initial={{opacity: 0, y: -100 }}
+    transition={{ duration: 1.5}} 
+    className="my-20 text-center text-4xl">Technologies</motion.h1>
       {/* Grille des icônes */}
-      <div className="flex flex-wrap items-center justify-center gap-4">
+      <motion.div
+      whileInView={{ opacity: 1, y:0}}
+    initial={{opacity: 0, y: -100 }}
+    transition={{ duration: 1.5}}  className="flex flex-wrap items-center justify-center gap-4">
         {/* React */}
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <RiReactjsLine className="text-7xl text-cyan-400" />
-        </div>
+<motion.div
+  variants={iconVariants(2.5)}
+  initial="initial"
+  animate="animate"
+  className="rounded-2xl border-4 border-neutral-800 p-4 text-center"
+>
+  <RiReactjsLine className="text-7xl text-cyan-400 mx-auto" />
+  <p className="text-cyan-400 mt-2 font-semibold">React</p>
+</motion.div>
 
-        {/* javascript */}
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <TbBrandJavascript className="text-7xl text-yellow-500" />
-        </div>
+{/* JavaScript */}
+<motion.div
+  variants={iconVariants(3)}
+  initial="initial"
+  animate="animate"
+  className="rounded-2xl border-4 border-neutral-800 p-4 text-center"
+>
+  <TbBrandJavascript className="text-7xl text-yellow-500 mx-auto" />
+  <p className="text-yellow-500 mt-2 font-semibold">JavaScript</p>
+</motion.div>
 
-        {/* Node.js */}
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <FaNodeJs className="text-7xl text-green-500" />
-        </div>
+{/* Node.js */}
+<motion.div
+  variants={iconVariants(5)}
+  initial="initial"
+  animate="animate"
+  className="rounded-2xl border-4 border-neutral-800 p-4 text-center"
+>
+  <FaNodeJs className="text-7xl text-green-500 mx-auto" />
+  <p className="text-green-500 mt-2 font-semibold">Node.js</p>
+</motion.div>
 
+{/* Python */}
+<motion.div
+  variants={iconVariants(4)}
+  initial="initial"
+  animate="animate"
+  className="rounded-2xl border-4 border-neutral-800 p-4 text-center"
+>
+  <SiPython className="text-7xl text-yellow-400 mx-auto" />
+  <p className="text-yellow-700 mt-2 font-semibold">Python</p>
+</motion.div>
 
-        {/* python */}
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <SiPython className="text-7xl text-yellow-700" />
-        </div>
+{/* Django */}
+<motion.div
+  variants={iconVariants(4)}
+  initial="initial"
+  animate="animate"
+  className="rounded-2xl border-4 border-neutral-800 p-4 text-center"
+>
+  <TbBrandDjango className="text-7xl text-green-500 mx-auto" />
+  <p className="text-green-500 mt-2 font-semibold">Django</p>
+</motion.div>
 
-        {/* Django */}
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <TbBrandDjango className="text-7xl text-blue-500" />
-        </div>
+{/* Symfony */}
+<motion.div
+  variants={iconVariants(5)}
+  initial="initial"
+  animate="animate"
+  className="rounded-2xl border-4 border-neutral-800 p-4 text-center"
+>
+  <TbBrandSymfony className="text-7xl text-white mx-auto" />
+  <p className="text-white mt-2 font-semibold">Symfony</p>
+</motion.div>
 
-         {/* Symfony */}
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <TbBrandSymfony className="text-7xl text-white" />
-        </div>
-        
+{/* MongoDB (remplace le mauvais SiMysql par le bon icône si nécessaire) */}
+<motion.div
+  variants={iconVariants(6)}
+  initial="initial"
+  animate="animate"
+  className="rounded-2xl border-4 border-neutral-800 p-4 text-center"
+>
+  <SiMysql className="text-7xl text-blue-400 mx-auto" />
+  <p className="text-blue-400 mt-2 font-semibold">MySQL</p>
+</motion.div>
 
-        {/* MongoDB */}
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <SiMysql className="text-7xl text-green-500" />
-        </div>
-        {/* PostgreSQL */}
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
-          <SiPostgresql className="text-7xl text-sky-700" />
-        </div>
-      </div>
+{/* PostgreSQL */}
+<motion.div
+  variants={iconVariants(6)}
+  initial="initial"
+  animate="animate"
+  className="rounded-2xl border-4 border-neutral-800 p-4 text-center"
+>
+  <SiPostgresql className="text-7xl text-sky-700 mx-auto" />
+  <p className="text-sky-700 mt-2 font-semibold">PostgreSQL</p>
+</motion.div>
+      </motion.div>
     </div>
   );
 };
